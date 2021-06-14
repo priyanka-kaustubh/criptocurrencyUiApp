@@ -18,12 +18,21 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     ExploreScreen(),
     NotificationScreen(),
     SettingScreen(),
+
   ];
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Stack(
+        children: [
+          _builderOffstageNavigation(0),
+          _builderOffstageNavigation(1),
+          _builderOffstageNavigation(2),
+          _builderOffstageNavigation(3),
+        ],
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
