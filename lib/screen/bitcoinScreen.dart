@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../widgets-screen/line-chart-widget.dart';
 class BitcoinScreen extends StatefulWidget {
   @override
   _BitcoinScreenState createState() => _BitcoinScreenState();
@@ -175,12 +176,12 @@ class _BitcoinScreenState extends State<BitcoinScreen> {
             Container(
               height: 150,
               margin: EdgeInsets.all(15.0),
-              padding: EdgeInsets.all(15.0),
+              //padding: EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: Colors.white,
               ),
-              child: null,
+              child: LineChartWidget(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
